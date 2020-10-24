@@ -49,8 +49,8 @@ export default function ProjectCard(props) {
           <div class="card-description">
             <h4 style={{ margin: "3px", color: "black" }}>{data.title}</h4>
             <div>
-              {_.map(data.chips, (chip) => (
-                <Chip label={chip} size="small" style={{ margin: 1 }} className={classes.chip} />
+              {_.map(data.chips, (chip, index) => (
+                <Chip key={`${chip}-${index}`} label={chip} size="small" style={{ margin: 1 }} className={classes.chip} />
               ))}
             </div>
             <p style={{ marginTop: "10px", color: "black", fontSize: "11px" }}>{data.description}</p>
