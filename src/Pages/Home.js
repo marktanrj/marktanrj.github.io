@@ -1,11 +1,16 @@
 import React from "react";
+
 import Typography from "@material-ui/core/Typography";
-import { motion } from "framer-motion";
 import Paper from "@material-ui/core/Paper";
 import { Grid, Container } from "@material-ui/core";
-import me from "../Images/me.jpg";
+
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import _ from "lodash";
+
 import ProjectCard from "../Components/ProjectCard";
+import { projectData } from "../Constants/projectData";
+import me from "../Images/me.jpg";
 
 const nameVariants = {
   hidden: {
@@ -62,22 +67,13 @@ export default function Home() {
               </Typography>
             </motion.div>
           </Grid>
-
-          <Grid item xs={12} sm={6} md={4}>
-            <ProjectCard />
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ProjectCard />
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ProjectCard />
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ProjectCard />
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <ProjectCard />
-          </Grid>
+          {_.map(projectData, (item) => {
+            return (
+              <Grid item xs={12} sm={6} md={4}>
+                <ProjectCard data={item} />
+              </Grid>
+            );
+          })}
         </Grid>
       </Container>
     </motion.div>

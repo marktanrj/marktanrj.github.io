@@ -9,7 +9,7 @@ import { Helmet } from "react-helmet";
 ReactDOM.render(
   <React.StrictMode>
     <Helmet>
-      <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet" />
     </Helmet>
     <Router>
       <App />

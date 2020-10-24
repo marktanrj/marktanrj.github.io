@@ -1,107 +1,44 @@
 .card {
   position: relative;
   height: 18em;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
-.card-image {
+.card-image,
+.card-image-gif {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 18em;
   width: auto;
-  border-radius: 10px;
   overflow: hidden;
   background-repeat: no-repeat;
   background-position: center center;
-  background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=640:*");
+  z-index: 1;
 }
 
-.card-image:hover {
-  background-image: url("https://media.giphy.com/media/cMKFabMAVm2skgzg0J/giphy.gif");
+.card:hover .card-image {
+  z-index: -1;
 }
 
-.property-card {
-  height: 18em;
-  width: 14em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  border-radius: 16px;
-  overflow: hidden;
-  -webkit-box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
-  box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
-}
-/* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */
-
-/* Top Half of card, image. */
-
-.property-image {
-  height: 6em;
-  width: 14em;
-  padding: 1em 2em;
-  position: Absolute;
-  top: 0px;
-  -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  background-image: url("https://cdn.photographylife.com/wp-content/uploads/2017/01/What-is-landscape-photography.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-/* Bottom Card Section */
-
-.property-description {
-  background-color: #fafafc;
-  height: 12em;
-  width: 14em;
+.card-description {
   position: absolute;
-  bottom: 0em;
-  -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  padding: 0.5em 1em;
-  text-align: center;
-}
-
-/* Social Icons */
-
-.property-social-icons {
-  width: 1em;
-  height: 1em;
-  background-color: black;
-  position: absolute;
-  bottom: 1em;
-  left: 1em;
-  -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-
-/* Property Cards Hover States */
-
-.property-card:hover .property-description {
-  height: 0em;
-  padding: 0px 1em;
-}
-.property-card:hover .property-image {
-  height: 18em;
-}
-
-.property-card:hover .property-social-icons {
+  bottom: -60px;
+  left: 0;
+  right: 0;
+  height: 120px;
+  transition: 0.2s;
   background-color: white;
+  opacity: 1;
+  z-index: 10;
 }
 
-.property-card:hover .property-social-icons:hover {
-  background-color: blue;
-  cursor: pointer;
+.card:hover .card-description {
+  background-color: white;
+  overflow: hidden;
+  opacity: 0.9;
+  font-size: 18px;
+  transform: translateY(-40px);
 }

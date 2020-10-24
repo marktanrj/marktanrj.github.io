@@ -2,7 +2,7 @@ import { createMuiTheme } from "@material-ui/core/styles";
 
 export default createMuiTheme({
   typography: {
-    fontFamily: ["Anton", "sans-serif"].join(","),
+    fontFamily: ["Barlow", "sans-serif"].join(","),
   },
   palette: {
     primary: {

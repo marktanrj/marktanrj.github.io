@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route, Link, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link, useLocation, Redirect } from "react-router-dom";
 import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
 import theme from "./Constants/theme";
 import { motion, AnimatePresence } from "framer-motion";
@@ -20,7 +20,8 @@ function App() {
           <AnimatePresence exitBeforeEnter>
             <Switch location={location} key={location.key}>
               <Route exact path="/" component={Home} />
-              <Route exact path="/project" component={Project} />
+              <Route exact path="/project" component={Home} />
+              <Route exact path="/project/:id" component={Project} />
             </Switch>
           </AnimatePresence>
         </div>

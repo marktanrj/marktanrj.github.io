@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Typography from "@material-ui/core/Typography";
 import { motion } from "framer-motion";
+import { projectData } from "../Constants/projectData";
 
 const containerVariants = {
   hidden: {
@@ -19,10 +20,19 @@ const containerVariants = {
     },
   },
 };
-export default function Project() {
+export default function Project({ match }) {
+  const [projectDetails, setProjectDetails] = useState(projectData[match.params.id]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 500);
+  }, []);
+
   return (
     <motion.div variants={containerVariants} initial="hidden" animate="visible" exit="exit">
-      <div>Hello world</div>
+      <h2>{projectDetails && projectDetails.title}</h2>
+      <p>{projectDetails && projectDetails.details}</p>
     </motion.div>
   );
 }

@@ -3,6 +3,7 @@ import Typography from "@material-ui/core/Typography";
 import { motion } from "framer-motion";
 import { Grid, Container, Button } from "@material-ui/core";
 import Link from "@material-ui/core/Link";
+import { Link as routerLink } from "react-router-dom";
 
 const headerVariants = {
   hidden: {
@@ -25,7 +26,7 @@ const headerVariants = {
 export default function NavigationBar() {
   return (
     <motion.header
-      style={{ position: "fixed", top: 0, width: "100%", overflow: "hidden", backgroundColor: "#eceff1", zIndex: "11" }}
+      style={{ position: "fixed", top: 0, width: "100%", overflow: "hidden", backgroundColor: "#F4F6FC", zIndex: "11" }}
       variants={headerVariants}
       initial="hidden"
       animate="visible"
@@ -33,7 +34,7 @@ export default function NavigationBar() {
       <Grid container justify="space-around" spacing={10}>
         <Grid item xs={4}>
           <Button color="black">
-            <Link href="https://marktan.me" style={{ color: "black", fontSize: "30px", textDecoration: "none" }} target="_blank">
+            <Link to={"/"} component={routerLink} style={{ color: "black", fontSize: "20px", textDecoration: "none" }}>
               Mark Tan
             </Link>
           </Button>
@@ -43,7 +44,7 @@ export default function NavigationBar() {
 
         <Grid item xs={4}>
           <Button color="black">
-            <Link href="https://github.com/marktanrj" style={{ color: "black", fontSize: "30px", textDecoration: "none" }} target="_blank">
+            <Link href="https://github.com/marktanrj" style={{ color: "black", fontSize: "20px", textDecoration: "none" }} target="_blank">
               Github
             </Link>
           </Button>
@@ -51,7 +52,7 @@ export default function NavigationBar() {
           <Button color="black">
             <Link
               href="https://www.linkedin.com/in/marktanrj/"
-              style={{ color: "black", fontSize: "30px", textDecoration: "none" }}
+              style={{ color: "black", fontSize: "20px", textDecoration: "none" }}
               target="_blank"
             >
               Linkedin

@@ -40,15 +40,13 @@
 body {
   overflow: hidden auto;
   width: 100vw;
-}
-/* 
-body {
-  background: linear-gradient(-45deg, #ffccbc, #f1f8e9, #b2ebf2, #e1bee7);
+  background-color: #f9fafe;
+  /* background: linear-gradient(-45deg, #d6d6ff, #fff3f3);
   background-size: 500% 500%;
-  animation: gradient 15s ease infinite;
+  animation: gradient 15s ease infinite; */
 }
 
-@keyframes gradient {
+/* @keyframes gradient {
   0% {
     background-position: 0% 50%;
   }
