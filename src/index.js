@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 ReactDOM.render(
@@ -11,9 +11,9 @@ ReactDOM.render(
     <Helmet>
       <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet" />
     </Helmet>
-    <Router>
+    <HashRouter basename={process.env.PUBLIC_URL}>
       <App />
-    </Router>
+    </HashRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route, Link, useLocation, Redirect } from "react-router-dom";
+import { Switch, Route, Link, useLocation, Redirect } from "react-router-dom";
 import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
 import theme from "./Constants/theme";
 import { motion, AnimatePresence } from "framer-motion";
