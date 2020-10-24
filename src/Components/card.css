@@ -1,0 +1,56 @@
+.card {
+  position: relative;
+  height: 15em;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: black;
+}
+
+.card-image,
+.card-image-gif {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 13em;
+  width: auto;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 1;
+}
+
+.card-image-gif {
+  opacity: 0;
+}
+
+.card:hover .card-image-gif {
+  opacity: 1;
+  height: 10em;
+  background-size: contain;
+}
+
+.card:hover .card-image {
+  opacity: 0;
+}
+
+.card-description {
+  position: absolute;
+  bottom: -60px;
+  left: 0;
+  right: 0;
+  height: 120px;
+  transition: 0.2s;
+  background-color: white;
+  opacity: 1;
+  z-index: 10;
+}
+
+.card:hover .card-description {
+  background-color: white;
+  overflow: hidden;
+  opacity: 0.9;
+  font-size: 18px;
+  transform: translateY(-40px);
+}
