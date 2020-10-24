@@ -18,7 +18,7 @@ function App() {
         <NavigationBar />
         <div style={{ marginTop: "60px" }}>
           <AnimatePresence exitBeforeEnter>
-            <Switch location={location} key={location.key}>
+            <Switch location={location} key={location.pathname}>
               <Route exact path="/" component={HomePage} />
               <Route exact path="/project" component={HomePage} />
               <Route exact path="/project/:id" component={ProjectPage} />
