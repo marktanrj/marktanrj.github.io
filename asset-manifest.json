@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c717c914.chunk.css",
+    "main.js": "/static/js/main.198c0df9.chunk.js",
+    "main.js.map": "/static/js/main.198c0df9.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.2eda2bfa.js",
+    "runtime-main.js.map": "/static/js/runtime-main.2eda2bfa.js.map",
+    "static/js/2.a335c74c.chunk.js": "/static/js/2.a335c74c.chunk.js",
+    "static/js/2.a335c74c.chunk.js.map": "/static/js/2.a335c74c.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.12899735499d8c6ced0fe7a75b9cc319.js": "/precache-manifest.12899735499d8c6ced0fe7a75b9cc319.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.c717c914.chunk.css.map": "/static/css/main.c717c914.chunk.css.map",
+    "static/js/2.a335c74c.chunk.js.LICENSE.txt": "/static/js/2.a335c74c.chunk.js.LICENSE.txt",
+    "static/media/me.jpg": "/static/media/me.db401232.jpg",
+    "static/media/meme.jpg": "/static/media/meme.e4aa8bce.jpg",
+    "static/media/portfolio.gif": "/static/media/portfolio.56648c66.gif",
+    "static/media/portfolio.png": "/static/media/portfolio.8c6b0966.png",
+    "static/media/udemy.gif": "/static/media/udemy.14eadaa6.gif",
+    "static/media/udemyIcon.png": "/static/media/udemyIcon.4911145c.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2eda2bfa.js",
+    "static/js/2.a335c74c.chunk.js",
+    "static/css/main.c717c914.chunk.css",
+    "static/js/main.198c0df9.chunk.js"
+  ]
+}
