@@ -24,15 +24,9 @@ const containerVariants = {
 export default function ProjectPage({ match }) {
   const [projectDetails, __] = useState(projectData[match.params.id]);
 
-  useEffect(() => {
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 500);
-  }, []);
-
   return (
     <motion.div variants={containerVariants} initial="hidden" animate="visible" exit="exit">
-      <Container maxWidth="md">
+      <Container>
         <Grid container spacing={2}>
           <Grid item xs={12}>
             <h2>{projectDetails && projectDetails.title}</h2>

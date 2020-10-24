@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import "./App.css";
 import { Switch, Route, Link, useLocation, Redirect } from "react-router-dom";
 import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
@@ -9,8 +9,15 @@ import NavigationBar from "./Components/NavigationBar";
 import HomePage from "./Pages/HomePage";
 import ProjectPage from "./Pages/ProjectPage";
 
+import _ from "lodash";
+
 function App() {
   const location = useLocation();
+  useLayoutEffect(() => {
+    _.defer(() => {
+      window.scrollTo(0, 0);
+    }, []);
+  }, [location.pathname]);
 
   return (
     <ThemeProvider theme={theme}>

@@ -40,8 +40,11 @@ const headerVariants = {
 
 const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
+  header: {
+    position: "fixed",
+    top: 0,
+    width: "100%",
+    zIndex: 20,
   },
   drawer: {
     [theme.breakpoints.up("sm")]: {
@@ -61,7 +64,9 @@ const useStyles = makeStyles((theme) => ({
       display: "none",
     },
   },
-  toolbar: theme.mixins.toolbar,
+  toolbar: {
+    minHeight: "50px",
+  },
   drawerPaper: {
     width: drawerWidth,
   },
@@ -73,10 +78,13 @@ const useStyles = makeStyles((theme) => ({
     marginRight: "auto",
     marginLeft: 0,
   },
+  link: {
+    color: "black",
+    fontSize: "20px",
+  },
 }));
 
 export default function NavigationBar() {
-  const dummyCategories = ["Hokusai", "Hiroshige", "Utamaro", "Kuniyoshi", "Yoshitoshi"];
   const classes = useStyles();
   const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -98,21 +106,16 @@ export default function NavigationBar() {
   );
 
   return (
-    <motion.header
-      style={{ position: "fixed", top: 0, width: "100%", overflow: "hidden", backgroundColor: "#F4F6FC", zIndex: "11" }}
-      variants={headerVariants}
-      initial="hidden"
-      animate="visible"
-    >
-      <AppBar position="fixed" className={classes.appBar}>
-        <Toolbar>
+    <motion.header className={classes.header} variants={headerVariants} initial="hidden" animate="visible">
+      <AppBar position="fixed" className={classes.appBar} elevation={1}>
+        <Toolbar className={classes.toolbar}>
           <IconButton color="inherit" aria-label="Open drawer" edge="start" onClick={handleDrawerToggle} className={classes.menuButton}>
             <MenuIcon />
           </IconButton>
           <Grid justify="space-around" container>
             <Grid item>
               <Button>
-                <Link to={"/"} component={routerLink} style={{ color: "black", fontSize: "20px", textDecoration: "none" }}>
+                <Link to={"/"} component={routerLink} className={classes.link} style={{ textDecoration: "none" }}>
                   Mark Tan
                 </Link>
               </Button>
@@ -120,19 +123,17 @@ export default function NavigationBar() {
             <Hidden xsDown implementation="css">
               <Grid item>
                 <Button>
-                  <Link
-                    href="https://github.com/marktanrj"
-                    style={{ color: "black", fontSize: "20px", textDecoration: "none" }}
-                    target="_blank"
-                  >
+                  <Link href="https://github.com/marktanrj" target="_blank" className={classes.link} style={{ textDecoration: "none" }}>
                     Github
                   </Link>
                 </Button>
+                <span style={{ marginLeft: "10px" }} />
                 <Button>
                   <Link
                     href="https://www.linkedin.com/in/marktanrj/"
-                    style={{ color: "black", fontSize: "20px", textDecoration: "none" }}
                     target="_blank"
+                    className={classes.link}
+                    style={{ textDecoration: "none" }}
                   >
                     Linkedin
                   </Link>
@@ -177,7 +178,7 @@ export default function NavigationBar() {
           </Drawer>
         </Hidden> */}
       </nav>
-      <div className={classes.toolbar} />
+      <Toolbar className={classes.toolbar} />
     </motion.header>
   );
 }
