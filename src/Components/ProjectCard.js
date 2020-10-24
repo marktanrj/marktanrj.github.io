@@ -3,13 +3,11 @@ import Typography from "@material-ui/core/Typography";
 import { Grid, Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Chip from "@material-ui/core/Chip";
-import Paper from "@material-ui/core/Paper";
 
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import _ from "lodash";
 
-import me from "../Images/me.jpg";
 import "./card.css";
 
 const buttonVariants = {

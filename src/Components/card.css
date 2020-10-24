@@ -1,8 +1,9 @@
 .card {
   position: relative;
-  height: 18em;
+  height: 15em;
   border-radius: 20px;
   overflow: hidden;
+  background-color: black;
 }
 
 .card-image,
@@ -11,16 +12,27 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 18em;
+  height: 13em;
   width: auto;
   overflow: hidden;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   z-index: 1;
 }
 
+.card-image-gif {
+  opacity: 0;
+}
+
+.card:hover .card-image-gif {
+  opacity: 1;
+  height: 10em;
+  background-size: contain;
+}
+
 .card:hover .card-image {
-  z-index: -1;
+  opacity: 0;
 }
 
 .card-description {

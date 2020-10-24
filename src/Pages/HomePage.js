@@ -51,7 +51,7 @@ const containerVariants = {
   },
 };
 
-export default function Home() {
+export default function HomePage() {
   return (
     <motion.div variants={containerVariants} initial="hidden" animate="visible" exit="exit">
       <Container maxWidth="md">

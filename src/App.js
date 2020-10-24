@@ -6,8 +6,8 @@ import theme from "./Constants/theme";
 import { motion, AnimatePresence } from "framer-motion";
 
 import NavigationBar from "./Components/NavigationBar";
-import Home from "./Pages/Home";
-import Project from "./Pages/Project";
+import HomePage from "./Pages/HomePage";
+import ProjectPage from "./Pages/ProjectPage";
 
 function App() {
   const location = useLocation();
@@ -19,9 +19,9 @@ function App() {
         <div style={{ marginTop: "60px" }}>
           <AnimatePresence exitBeforeEnter>
             <Switch location={location} key={location.key}>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/project" component={Home} />
-              <Route exact path="/project/:id" component={Project} />
+              <Route exact path="/" component={HomePage} />
+              <Route exact path="/project" component={HomePage} />
+              <Route exact path="/project/:id" component={ProjectPage} />
             </Switch>
           </AnimatePresence>
         </div>
