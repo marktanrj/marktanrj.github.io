@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import Typography from "@material-ui/core/Typography";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { projectData } from "../Constants/projectData";
 import { Grid, Container, Button } from "@material-ui/core";
@@ -22,7 +21,7 @@ const containerVariants = {
   },
 };
 export default function ProjectPage({ match }) {
-  const [projectDetails, __] = useState(projectData[match.params.id]);
+  const [projectDetails] = useState(projectData[match.params.id]);
 
   return (
     <motion.div variants={containerVariants} initial="hidden" animate="visible" exit="exit">
@@ -39,7 +38,7 @@ export default function ProjectPage({ match }) {
             )}
           </Grid>
           <Grid item xs={12}>
-            <img src={projectDetails.gif} />
+            <img src={projectDetails.gif} alt="project-details" />
           </Grid>
           <Grid item xs={12}>
             <p>{projectDetails && projectDetails.details}</p>

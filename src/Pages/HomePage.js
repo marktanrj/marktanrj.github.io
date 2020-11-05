@@ -1,10 +1,8 @@
 import React from "react";
 
 import Typography from "@material-ui/core/Typography";
-import Paper from "@material-ui/core/Paper";
 import { Grid, Container } from "@material-ui/core";
 
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import _ from "lodash";
 
@@ -58,12 +56,12 @@ export default function HomePage() {
         <Grid container spacing={5}>
           <Grid item xs={12}>
             <motion.div variants={nameVariants} initial="hidden" animate="visible" exit="exit">
-              <img style={{ borderRadius: "100px" }} src={me} width="130px" />
+              <img style={{ borderRadius: "100px" }} src={me} width="130px" alt="profile-pic" />
               <Typography style={{ marginTop: "10px" }} variant="h4">
                 Mark Tan
               </Typography>
               <Typography style={{ marginTop: "5px", fontFamily: "roboto" }} variant="h6">
-                Final Year Student | Software Engineer
+                Final Year Information Systems Student
               </Typography>
             </motion.div>
           </Grid>

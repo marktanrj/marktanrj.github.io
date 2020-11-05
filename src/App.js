@@ -1,9 +1,9 @@
 import React, { useLayoutEffect } from "react";
 import "./App.css";
-import { Switch, Route, Link, useLocation, Redirect } from "react-router-dom";
-import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
+import { Switch, Route, useLocation } from "react-router-dom";
+import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "./Constants/theme";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
 import NavigationBar from "./Components/NavigationBar";
 import HomePage from "./Pages/HomePage";

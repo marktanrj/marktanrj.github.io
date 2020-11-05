@@ -1,6 +1,4 @@
 import React from "react";
-import Typography from "@material-ui/core/Typography";
-import { Grid, Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Chip from "@material-ui/core/Chip";
 
@@ -33,20 +31,20 @@ export default function ProjectCard(props) {
   return (
     <Link to={`/project/${data.id}`} style={{ textDecoration: "none" }}>
       <div style={{ position: "relative" }}>
-        <motion.div class="card" variants={buttonVariants} initial="visible" whileHover="hover" whileTap="tap">
+        <motion.div className="card" variants={buttonVariants} initial="visible" whileHover="hover" whileTap="tap">
           <div
-            class="card-image-gif"
+            className="card-image-gif"
             style={{
               backgroundImage: `url(${data.gif})`,
             }}
           ></div>
           <div
-            class="card-image"
+            className="card-image"
             style={{
               backgroundImage: `url(${data.url})`,
             }}
           ></div>
-          <div class="card-description">
+          <div className="card-description">
             <h4 style={{ margin: "3px", color: "black" }}>{data.title}</h4>
             <div>
               {_.map(data.chips, (chip, index) => (
