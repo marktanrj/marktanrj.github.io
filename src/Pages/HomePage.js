@@ -52,7 +52,7 @@ const containerVariants = {
 export default function HomePage() {
   return (
     <motion.div variants={containerVariants} initial="hidden" animate="visible" exit="exit">
-      <Container maxWidth="md">
+      <Container maxWidth="md" style={{ marginBottom: "120px" }}>
         <Grid container spacing={5}>
           <Grid item xs={12}>
             <motion.div variants={nameVariants} initial="hidden" animate="visible" exit="exit">
@@ -62,6 +62,9 @@ export default function HomePage() {
               </Typography>
               <Typography style={{ marginTop: "5px", fontFamily: "roboto" }} variant="h6">
                 Final Year Information Systems Student
+              </Typography>
+              <Typography style={{ marginTop: "5px", fontFamily: "roboto" }} variant="h6">
+                Aspiring Software Engineer
               </Typography>
             </motion.div>
           </Grid>

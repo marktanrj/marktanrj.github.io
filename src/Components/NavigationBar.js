@@ -1,5 +1,4 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
 import { Grid, Button } from "@material-ui/core";
 import Link from "@material-ui/core/Link";
 import { Link as routerLink } from "react-router-dom";
@@ -16,32 +15,8 @@ import CloseIcon from "@material-ui/icons/Close";
 import Toolbar from "@material-ui/core/Toolbar";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 
-const headerVariants = {
-  hidden: {
-    y: "-60vh",
-    opacity: 0,
-  },
-  visible: {
-    y: "0",
-    opacity: 1,
-    transition: {
-      type: "spring",
-      duration: 4,
-      delay: 0.8,
-      ease: "easeInOut",
-      stiffness: 120,
-    },
-  },
-};
-
 const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
-  header: {
-    position: "fixed",
-    top: 0,
-    width: "100%",
-    zIndex: 20,
-  },
   drawer: {
     [theme.breakpoints.up("sm")]: {
       width: drawerWidth,
@@ -53,6 +28,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#F4F6FC",
     color: "black",
     margin: 0,
+    position: "fixed",
+    width: "100vw",
+    left: 0,
+    right: 0,
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -83,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
 export default function NavigationBar() {
   const classes = useStyles();
   const theme = useTheme();
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   function handleDrawerToggle() {
     setMobileOpen(!mobileOpen);
   }
@@ -91,6 +70,9 @@ export default function NavigationBar() {
   const drawer = (
     <div>
       <List>
+        <ListItem component={routerLink} button onClick={() => setMobileOpen(false)} to="/" key="home">
+          <ListItemText primary={"Home"} />
+        </ListItem>
         <ListItem component="a" button href="https://github.com/marktanrj" target="_blank" key="github">
           <ListItemText primary={"Github"} />
         </ListItem>
@@ -102,7 +84,7 @@ export default function NavigationBar() {
   );
 
   return (
-    <motion.header className={classes.header} variants={headerVariants} initial="hidden" animate="visible">
+    <React.Fragment>
       <AppBar position="fixed" className={classes.appBar} elevation={1}>
         <Toolbar className={classes.toolbar}>
           <IconButton color="inherit" aria-label="Open drawer" edge="start" onClick={handleDrawerToggle} className={classes.menuButton}>
@@ -174,7 +156,6 @@ export default function NavigationBar() {
           </Drawer>
         </Hidden> */}
       </nav>
-      <Toolbar className={classes.toolbar} />
-    </motion.header>
+    </React.Fragment>
   );
 }

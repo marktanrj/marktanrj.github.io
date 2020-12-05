@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { projectData } from "../Constants/projectData";
-import { Grid, Container, Button } from "@material-ui/core";
+import { Grid, Container, Button, Box } from "@material-ui/core";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
 
 const containerVariants = {
   hidden: {
@@ -22,6 +24,8 @@ const containerVariants = {
 };
 export default function ProjectPage({ match }) {
   const [projectDetails] = useState(projectData[match.params.id]);
+  const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up("sm"));
 
   return (
     <motion.div variants={containerVariants} initial="hidden" animate="visible" exit="exit">
@@ -31,17 +35,49 @@ export default function ProjectPage({ match }) {
             <h2>{projectDetails && projectDetails.title}</h2>
           </Grid>
           <Grid item xs={12}>
-            {projectDetails && projectDetails.projectLink && (
-              <Button component="a" href={projectDetails && projectDetails.projectLink} target="_blank" variant="contained" color="primary">
-                Project Link
-              </Button>
+            {projectDetails &&
+              projectDetails.buttons &&
+              Object.entries(projectDetails.buttons).map(([buttonName, item]) => {
+                return (
+                  <Button component="a" href={item.url} target="_blank" variant="contained" color={item.theme} key={buttonName}>
+                    {buttonName}
+                  </Button>
+                );
+              })}
+          </Grid>
+          {!isDesktop && (
+            <Grid item xs={12}>
+              {projectDetails.gif ? (
+                <img src={projectDetails.gif} alt="project-details" width="100%" />
+              ) : (
+                <img src={projectDetails.url} alt="project-details" width="100%" />
+              )}
+            </Grid>
+          )}
+          <Grid item container xs={12}>
+            <Grid item md={7} xs={12}>
+              <Box textAlign="left">
+                {projectDetails &&
+                  projectDetails.details &&
+                  projectDetails.details.map((info) => {
+                    return (
+                      <React.Fragment>
+                        <h3>{info.header}</h3>
+                        <p>{info.text}</p>
+                      </React.Fragment>
+                    );
+                  })}
+              </Box>
+            </Grid>
+            {isDesktop && (
+              <Grid item md={5}>
+                {projectDetails.gif ? (
+                  <img src={projectDetails.gif} alt="project-details" width="100%" />
+                ) : (
+                  <img src={projectDetails.url} alt="project-details" width="100%" />
+                )}
+              </Grid>
             )}
-          </Grid>
-          <Grid item xs={12}>
-            <img src={projectDetails.gif} alt="project-details" />
-          </Grid>
-          <Grid item xs={12}>
-            <p>{projectDetails && projectDetails.details}</p>
           </Grid>
         </Grid>
       </Container>

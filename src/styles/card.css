@@ -1,6 +1,14 @@
 .card {
   position: relative;
-  height: 15em;
+  height: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.cardmobile {
+  position: relative;
+  height: 300px;
   border-radius: 20px;
   overflow: hidden;
   background-color: white;
@@ -12,7 +20,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 13em;
+  height: 230px;
   width: auto;
   overflow: hidden;
   background-size: cover;
@@ -27,7 +35,7 @@
 
 .card:hover .card-image-gif {
   opacity: 1;
-  height: 10em;
+  height: 140px;
   background-size: contain;
 }
 
