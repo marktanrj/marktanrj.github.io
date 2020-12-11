@@ -43,28 +43,28 @@ export default function ProjectCard(props) {
           whileHover="hover"
           whileTap="tap"
         >
-          {data.gif ? (
+          {data.cardGif ? (
             <div
               className="card-image-gif"
               style={{
-                backgroundImage: `url(${data.gif})`,
+                backgroundImage: `url(${data.cardGif})`,
               }}
             />
-          ) : data.url ? (
+          ) : data.cardImage ? (
             <div
               className="card-image-gif"
               style={{
-                backgroundImage: `url(${data.url})`,
+                backgroundImage: `url(${data.cardImage})`,
               }}
             />
           ) : (
             <React.Fragment />
           )}
-          {data.url && (
+          {data.cardImage && (
             <div
               className="card-image"
               style={{
-                backgroundImage: `url(${data.url})`,
+                backgroundImage: `url(${data.cardImage})`,
               }}
             />
           )}

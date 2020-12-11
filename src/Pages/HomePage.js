@@ -61,10 +61,10 @@ export default function HomePage() {
                 Mark Tan
               </Typography>
               <Typography style={{ marginTop: "5px", fontFamily: "roboto" }} variant="h6">
-                Final Year Information Systems Student
+                Aspiring Software Engineer
               </Typography>
               <Typography style={{ marginTop: "5px", fontFamily: "roboto" }} variant="h6">
-                Aspiring Software Engineer
+                Final Year Information Systems Student | SMU
               </Typography>
             </motion.div>
           </Grid>
