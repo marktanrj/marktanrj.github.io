@@ -1,39 +1,43 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "873fb6a11aaec0e62c185d4b8f91ad7e",
+    "revision": "5aab4e15fa7e60365281ef2885b1624f",
     "url": "/index.html"
   },
   {
-    "revision": "d8795e713f6b862433e6",
+    "revision": "162e72ce4a772256600d",
     "url": "/static/css/3.2d4113ae.chunk.css"
   },
   {
-    "revision": "6e0518b5811ad7beb954",
+    "revision": "bce1fabf3d45f8a7d7a0",
     "url": "/static/css/main.611ddd8f.chunk.css"
   },
   {
-    "revision": "6d81d6ec66adb6e2d4ec",
-    "url": "/static/js/2.15ab0308.chunk.js"
+    "revision": "b405a8b9b303803d8c2c",
+    "url": "/static/js/2.bea81d8c.chunk.js"
   },
   {
     "revision": "9bae26958ac26215d67f26731dfb2067",
-    "url": "/static/js/2.15ab0308.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.bea81d8c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d8795e713f6b862433e6",
-    "url": "/static/js/3.2dd27a3f.chunk.js"
+    "revision": "162e72ce4a772256600d",
+    "url": "/static/js/3.4b81c663.chunk.js"
   },
   {
-    "revision": "9419b2186f2ce55be4f9",
-    "url": "/static/js/4.36e78a2e.chunk.js"
+    "revision": "86d8154793c7706a1c51",
+    "url": "/static/js/4.eff468ae.chunk.js"
   },
   {
-    "revision": "6e0518b5811ad7beb954",
-    "url": "/static/js/main.84095b23.chunk.js"
+    "revision": "c49c84429ff5f484b348",
+    "url": "/static/js/5.e2f6865b.chunk.js"
   },
   {
-    "revision": "e033a4b7c40c5d557c30",
-    "url": "/static/js/runtime-main.d4067137.js"
+    "revision": "bce1fabf3d45f8a7d7a0",
+    "url": "/static/js/main.01d98a3b.chunk.js"
+  },
+  {
+    "revision": "b6386d3fa5dcfa18e8ab",
+    "url": "/static/js/runtime-main.7baecc20.js"
   },
   {
     "revision": "db401232a2be1b2e241f001703d1379c",
@@ -58,6 +62,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "4911145c817438fcbb952359f077bffb",
     "url": "/static/media/udemyIcon.4911145c.png"
+  },
+  {
+    "revision": "c6ad1ebb7ddd36b7a721d5e77d786be1",
+    "url": "/static/media/vulnarchitecture.c6ad1ebb.jpg"
   },
   {
     "revision": "ae121e47bedec9b3ae29f53c4837220d",
