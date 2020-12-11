@@ -29,6 +29,8 @@ export default function ProjectPage({ match }) {
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up("sm"));
 
+  const [backButtonHover, setBackButtonHover] = useState(false);
+
   const mediaContent = (
     <Grid item md={5}>
       {projectDetails.detailsMedia &&
@@ -58,10 +60,12 @@ export default function ProjectPage({ match }) {
               <Button
                 component={routerLink}
                 to="/"
-                variant="outlined"
+                variant={backButtonHover ? "contained" : "outlined"}
                 color="primary"
                 startIcon={<ArrowBackIcon />}
                 style={{ borderWidth: "2px" }}
+                onMouseEnter={() => setBackButtonHover(true)}
+                onMouseLeave={() => setBackButtonHover(false)}
               >
                 Back
               </Button>
@@ -76,7 +80,15 @@ export default function ProjectPage({ match }) {
               projectDetails.buttons &&
               Object.entries(projectDetails.buttons).map(([buttonName, item]) => {
                 return (
-                  <Button component="a" href={item.url} target="_blank" variant="contained" color={item.theme} key={buttonName}>
+                  <Button
+                    component="a"
+                    href={item.url}
+                    target="_blank"
+                    variant="contained"
+                    color={item.theme}
+                    key={buttonName}
+                    style={{ fontWeight: "bold" }}
+                  >
                     {buttonName}
                   </Button>
                 );

@@ -30,14 +30,13 @@ export const projectData = {
       {
         header: "Contributions",
         text: [
-          `Assisted with planning of app's architecture`,
           `Created MySQL database with GCP CloudSQL, integrated with Flask using SQLAlchemy`,
           `Integrated backend APIs with React app, used Redux Thunk for asyncronous code`,
           `Made frontend dynamic and wrote clean code with high reusability using HOC, pure components`,
           `Implemented fuzzysort for CVE search functionality`,
-          `Created API documentation page using Redocs`,
-          `Created file upload feature using React Dropzone and validate form with Joi`,
-          `Webscraped various vulnerability websites using BeautifulSoup`,
+          `Created API documentation page using Redoc`,
+          `Implemented file upload feature using React Dropzone and validate form with Joi`,
+          `Assisted with webscraping of various vulnerability websites using BeautifulSoup`,
           `Webscraped Twitter using Selenium Python`,
           `Experimented and built LightGBM machine learning model`,
         ],
