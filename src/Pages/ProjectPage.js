@@ -87,7 +87,7 @@ export default function ProjectPage({ match }) {
                     variant="contained"
                     color={item.theme}
                     key={buttonName}
-                    style={{ fontWeight: "bold" }}
+                    style={{ fontWeight: "bold", margin: "5px" }}
                   >
                     {buttonName}
                   </Button>

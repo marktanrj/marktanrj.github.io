@@ -5,8 +5,56 @@ import portfolioImage from "../Images/portfolio.png";
 import portfolioGif from "../Images/portfolio.gif";
 import vulnpredscoringImage from "../Images/vulnpredscoring.jpg";
 import vulnArchitectureImage from "../Images/vulnarchitecture.jpg";
+import botmaker from "../Images/botmaker.gif";
+import botmakerImage from "../Images/botmakerImage.png";
 
 export const projectData = {
+  botmaker: {
+    id: "botmaker",
+    title: "Bot Maker",
+    cardDescription: "Create Simple Telegram Bots",
+    cardChips: ["React", "Express", "PostgreSQL"],
+    cardImage: botmakerImage,
+    cardGif: botmaker,
+    allChips: [
+      "Typescript",
+      "React",
+      "Redux Toolkit",
+      "Tailwindcss",
+      "react-beautiful-dnd",
+      "Express",
+      "TypeORM",
+      "PostgreSQL",
+      "Netlify",
+      "AWS Lightsail",
+      "AWS Route53",
+    ],
+    details: [
+      {
+        header: "Project Type",
+        text: `Individual`,
+      },
+      {
+        header: "Project Date",
+        text: `December 2020`,
+      },
+      {
+        header: "Motivation/Description",
+        text: `A fun project to learn about Redux Toolkit, Tailwindcss, TypeOrm, and hosting on Netlify and AWS Lightsail.`,
+      },
+    ],
+    buttons: {
+      "Github Repo": {
+        url: "https://github.com/marktanrj/bot-maker",
+        theme: "primary",
+      },
+      "App Link": {
+        url: "https://www.botmaker.link/",
+        theme: "primary",
+      },
+    },
+    detailsMedia: [botmakerImage, botmaker],
+  },
   vulnerabilityprediction: {
     id: "vulnerabilityprediction",
     title: "Vulnerability Prediction Scoring",
