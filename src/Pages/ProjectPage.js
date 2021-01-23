@@ -32,7 +32,7 @@ export default function ProjectPage({ match }) {
   const [backButtonHover, setBackButtonHover] = useState(false);
 
   const mediaContent = (
-    <Grid item md={5}>
+    <Grid item md={5} style={{ marginBottom: "150px" }}>
       {projectDetails.detailsMedia &&
         projectDetails.detailsMedia.map((media, idx) => {
           return (
